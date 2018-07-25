@@ -13,4 +13,4 @@ Para instalação:
 Para utilização:
 - Em "http://localhost:3000", digite o nome do usuário que deseja buscar para acessar suas informações
 - Clique em qualquer um de seus repositórios para obter informações detalhadas sobre este
-- Alternativamente, para pesquisar um usuário diretamente, pode ser utilizado o link "http://localhost:3000/user{nomeDoUsuario}"
+- Alternativamente, para pesquisar um usuário diretamente, pode ser utilizado o link "http://localhost:3000/user/{nomeDoUsuario}"

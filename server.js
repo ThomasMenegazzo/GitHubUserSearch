@@ -4,45 +4,44 @@ var path = require('path');
 
 var app = express();
 
+//Define engine e pasta para o HTML
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+//Inicializa body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+//Define pasta de arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(function(req, res, next){
-	res.locals.errors = null;
-	next();
-});
-
+//Rota para busca de usuário no GitHub através do index
 app.post('/user', function(req, res){
-		var newUser = req.body.userName;
-		// console.log(req.body);
-		res.render('user', {newUser: newUser});
+  var newUser = req.body.userName;
+  res.render('user', {newUser: newUser});
 });
 
+//Rota para a págica com informações do repositório
 app.post('/repository', function(req, res){	
-		res.render('repository');	
+  res.render('repository');	
 });
 
-app.get('/', function(req, res){
-res.render('index');
-});
+//Rota para busca de usuário no GitHub através da URL
 app.get('/user/:newUser', function(req, res){
-	// console.log(req.params);
-res.render('user', req.params);
+  res.render('user', req.params);
 });
 
-app.get('/user', function(req, res){
-	var newUser = req.body.userName;
-		// console.log(req.body);
-		res.render('user');
-});
+//rota direta para a pasta de repositório (retorna ao ultimo repositório visitado)
 app.get('/repository', function(req, res){
-res.render('repository');
+  res.render('repository');
 });
+
+//Rota inicial
+app.get('/', function(req, res){
+  res.render('index');
+});
+
+//Inicialização do server
 app.listen(3000, function(){
-	console.log('Server started on port 3000');
+  console.log('Server started on port 3000');
 });

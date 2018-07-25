@@ -23,3 +23,4 @@ Próximos passos
 - Melhorar arraste dos links para repositórios
 - Consertar problemas de exibição no firefox
 - Consertar problemas de funcionamento no IE
+- Hospedar aplicativo

@@ -1,18 +1,24 @@
 //Função para pegar os dados do usuário pesquisado
 function loadUser(userName){
+  
+  //Caso a busca tenha sido feita em branco
   if(userName=='') {
-      alert("Por favor forneça um usuário");
-      window.location.href = "../";
-    }
+    alert("Por favor forneça um usuário");
+    window.location.href = "../";
+  }
+  
+  //Pega os elementos da grid com dados do usuário   
   const imgElement = document.getElementById('Imagem');
   const userElement = document.getElementById('Usuario');
   const followerElement = document.getElementById('SeguidoresValue');
   const followingElement = document.getElementById('SeguidosValue');
   const emailElement = document.getElementById('EmailValue');
   const bioElement = document.getElementById('BioValue');
+  
+  //Cria o caminho para buscar dados do GitHub
   const userInfo = `https://api.github.com/users/${userName}`;
 
-  //Criação do grid com dados do usuário  
+  //Criação do grid com dados do usuário a partir do fetch  
   fetch(userInfo)
   .then((resp) => resp.json())
   .then(data => {
@@ -67,20 +73,26 @@ function loadUser(userName){
   });
 }
 
-//Função que grava o caminho dos links para detalhes de cada repositório
+//Função que grava o caminho dos links para cada repositório
 $(document).on('click', '.RepositoryLink', function() {
   localStorage.setItem("repositoryPath", this.id); 
 });
 
 //Função que carrega os dados de um repositório específico
 function loadRepository(){
+	
+  //Pega URL para fazer o fetch no GitHub	
   let path = localStorage.getItem("repositoryPath");
+  
+  //Pega os elementos da grid
   const headerRepoElement = document.getElementById('headerRepoEspecifico');
   const descricaoElement = document.getElementById('DescricaoValue');
   const estrelasElement = document.getElementById('EstrelasValue');
   const linguagemElement = document.getElementById('LinguagemValue');
   const voltarElement = document.getElementById('Voltar');
   const linkElement = document.getElementById('Link');
+  
+  //Faz o fetch, coloca os dados na grid
   fetch(path)
   .then((resp) => resp.json())
   .then(data => {

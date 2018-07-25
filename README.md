@@ -17,7 +17,6 @@ Para utilização:
 
 
 Próximos passos
-- Comentar código
 - Mostrar usuário na URL quando a pesquisa é feita através do index 
 - Implementar verificação do GitHub para acesso aos emails
 - Melhorar arraste dos links para repositórios

@@ -1,7 +1,10 @@
 # testeDesbravadorRouting
 Software de interação com a API do GitHub, utilizando rotas
-Versão 1.0.0
+
+Versão 1.0.1
+
 Requerimentos: Node.js instalado
+
 
 Para instalação:
 - Clone o repositório
@@ -9,6 +12,7 @@ Para instalação:
 - Digite "npm install"
 - Após a instalação dos pacotes, inicie o programa com "node server.js"
 - No Chrome, acesse o programa em "http://localhost:3000"
+
 
 Para utilização:
 - Em "http://localhost:3000", digite o nome do usuário que deseja buscar para acessar suas informações

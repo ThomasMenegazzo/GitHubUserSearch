@@ -1,8 +1,19 @@
+function checkAuth(authToken){
+	if(authToken){
+	authElements = document.getElementsByClassName("authorization");
+	authElements[0].style.display = "none";
+	authElements[1].style.display = "none";
+	authElements[2].style.display = "block";
+	}
+}
+
 //Função para pegar os dados do usuário pesquisado
 function loadUser(userName){
-  
   //Caso a busca tenha sido feita em branco
-  if(userName=='') {
+  var splitPath=userName.split('?');
+  user= splitPath[0];
+  token = '?'+splitPath[1];
+  if(user=='') {
     alert("Por favor forneça um usuário");
     window.location.href = "../";
   }
@@ -16,7 +27,7 @@ function loadUser(userName){
   const bioElement = document.getElementById('BioValue');
   
   //Cria o caminho para buscar dados do GitHub
-  const userInfo = `https://api.github.com/users/${userName}`;
+  const userInfo = `https://api.github.com/users/${user}${token}`;
 
   //Criação do grid com dados do usuário a partir do fetch  
   fetch(userInfo)
@@ -51,9 +62,13 @@ function loadUser(userName){
     console.log(JSON.stringify(error));
   }); 
 
+  
+  console.log(user);
+  console.log(token);
+  
 //Criação da lista de repositórios do usuário
   const grupoRepos = document.getElementById('repositorios');
-  const repoInfo = `https://api.github.com/users/${userName}/repos`;
+  const repoInfo = `https://api.github.com/users/${user}/repos${token}`;
   fetch(repoInfo)
   .then((resp) => resp.json())
   .then(data=> {
@@ -61,7 +76,7 @@ function loadUser(userName){
     return data.map(function(data) {
       let a = createNode('a');
       a.innerHTML = `${data.name}  -  ${data.stargazers_count} estrelas`;
-      a.setAttribute("id",`https://api.github.com/repos/${userName}/${data.name}`);
+      a.setAttribute("id",`https://api.github.com/repos/${user}/${data.name}${token}`);
 	 a.setAttribute("class", "RepositoryLink");
 	 a.setAttribute("href","../repository");
 	 set_draggable(a);

@@ -51,9 +51,13 @@ a:active {
   display: block;
   text-align: center;
 }
-#escondido {
-	
+.authorization {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
 }
+
 /*Headers das páginas de usuário e repositório*/
 #headerUsuario {
   display: block;

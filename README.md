@@ -1,5 +1,6 @@
 # testeDesbravadorRouting
 Software de interação com a API do GitHub, utilizando rotas
+Software hosteado em https://pesquisagithub.herokuapp.com/
 
 Versão 1.1.1
 
@@ -11,13 +12,13 @@ Para instalação:
 - Abra a janela de comando na pasta principal
 - Digite "npm install"
 - Após a instalação dos pacotes, inicie o programa com "node server.js"
-- No Chrome, acesse o programa em "http://localhost:3000"
+- No Chrome, acesse o programa em "http://localhost:5000"
 
 
 Para utilização:
-- Em "http://localhost:3000", digite o nome do usuário que deseja buscar para acessar suas informações
+- Em "http://localhost:5000", digite o nome do usuário que deseja buscar para acessar suas informações
 - Clique em qualquer um de seus repositórios para obter informações detalhadas sobre este
-- Alternativamente, para pesquisar um usuário diretamente, pode ser utilizado o link "http://localhost:3000/user/{nomeDoUsuario}"
+- Alternativamente, para pesquisar um usuário diretamente, pode ser utilizado o link "http://localhost:5000/user/{nomeDoUsuario}"
 - Para acessar os emails públicos, clique no link na página inicial e faça a autorização
 
 

@@ -1,8 +1,9 @@
 # testeDesbravadorRouting
 Software de interação com a API do GitHub, utilizando rotas
-Software hosteado em https://pesquisagithub.herokuapp.com/
 
-Versão 1.1.1
+Software hospedado em https://pesquisagithub.herokuapp.com/
+
+Versão 1.2.1
 
 Requerimentos: Node.js instalado
 
@@ -27,4 +28,3 @@ Próximos passos
 - Melhorar arraste dos links para repositórios
 - Consertar problemas de exibição no firefox
 - Consertar problemas de funcionamento no IE
-- Hospedar aplicativo

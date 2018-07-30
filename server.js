@@ -5,8 +5,8 @@ var request = require('superagent');
 
 var app = express();
 var authToken = null;
-var clientID = '6dabb1b6637c94ddd7b0';
-var  clientSecret = '2d6e6357d90075eac7976ec647e24a12ab439a63';
+var clientID = '5782b95fb2b134b19b62';
+var  clientSecret = '9cc9aa44974f290925aa53318b12541f9e385676';
 
 //Define engine e pasta para o HTML
 app.set('view engine','ejs');
@@ -65,6 +65,4 @@ app.get('/', function(req, res){
 });
 
 //Inicialização do server
-app.listen(3000, function(){
-  console.log('Server started on port 3000');
-});
+app.listen(process.env.PORT || 5000);

@@ -1,4 +1,4 @@
-# testeDesbravadorRouting
+# GitHubUserSearch
 Software de interação com a API do GitHub, utilizando rotas
 
 Software hospedado em https://pesquisagithub.herokuapp.com/

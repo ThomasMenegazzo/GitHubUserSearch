@@ -26,7 +26,7 @@ app.post('/user', function(req, res){
   res.render('user', {newUser: newUser});
 });
 
-//Rota para a págica com informações do repositório
+//Rota para a página com informações do repositório
 app.post('/repository', function(req, res){	
   res.render('repository');	
 });

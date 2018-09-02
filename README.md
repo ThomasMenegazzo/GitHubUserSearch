@@ -3,7 +3,7 @@ Software de interação com a API do GitHub, utilizando rotas
 
 Software hospedado em https://pesquisagithub.herokuapp.com/
 
-Versão 1.2.1
+Versão 1.2.2
 
 Requerimentos: Node.js instalado
 

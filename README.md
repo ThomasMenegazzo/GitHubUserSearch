@@ -26,7 +26,6 @@ Para utilização:
 Próximos passos
 - Mostrar usuário na URL quando a pesquisa é feita através do index 
 - Melhorar arraste dos links para repositórios
-- Consertar problemas de exibição no firefox
-- Consertar problemas de funcionamento no IE
+- Consertar página do repositório no firefox
 - Refactoring
 - Melhorar loadtime

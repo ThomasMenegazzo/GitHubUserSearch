@@ -1,8 +1,5 @@
 html { 
-  background: url(background.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(background.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 /*Foto por Aral Tasher, encontrada no site Unsplash*/
@@ -39,11 +36,13 @@ a:active {
   position: fixed;
   top: 15%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: block;
   background-color: transparent;
   border: 1px solid #fff;
-  padding: 30px 25px;`
+  padding: 30px 25px;
 }
 
 .inicio #form{
@@ -76,6 +75,7 @@ a:active {
 
 /*CSS genérica para os grids*/
 .grid {
+  display: -ms-grid;
   display: grid;
   background-color: transparent;
   height: 302px;
@@ -96,11 +96,17 @@ a:active {
 
 /*Caixa com informações do usuário*/
 #GridUser {
-  grid-template: repeat(6, 1fr) / 300px repeat(6,1fr);
-  grid-gap: 4px;`
+  -ms-grid-rows: 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr;
+  -ms-grid-columns: 300px 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr;
+      grid-template: repeat(6, 1fr) / 300px repeat(6,1fr);
+  grid-gap: 4px;
 }
 
 #Imagem {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-area: 1 / 1 / span 6 / span 1;
   padding: 0;
   height: 300px; 
@@ -108,38 +114,74 @@ a:active {
 }
 
 #Usuario {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
   grid-area: 1 / 2 / span 1 / span 6;
 }
 
 #Seguidores {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: 2 / 2 / span 1 / span 2;
 }
 
 #SeguidoresValue {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
   grid-area: 2 / 4 / span 1 / span 1;
 }
 
 #Seguindo {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
   grid-area: 2 / 5 / span 1 / span 2;
 }
 
 #SeguidosValue {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 1;
   grid-area: 2 / 7 / span 1 / span 1;
 }
 
 #Email {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: 3 / 2 / span 1 / span 2;
 }
 
 #EmailValue {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 4;
   grid-area: 3 / 4 / span 1 / span 4;
 }
 
 #Bio {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
   grid-area: 4 / 2 / span 1 / span 6;
 }
 
 #BioValue {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
   grid-area: 5 / 2 / span 2 / span 6;
   text-align: left;
   padding: 4px;
@@ -147,14 +189,16 @@ a:active {
 
 /*Lista de repositórios*/
 #repositorios {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 800px;
   list-style-type: none;
   margin: 0 auto;
 }
 
 .RepositoryLink {
-  width: 200px
+  width: 200px;
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 5px;
@@ -168,54 +212,88 @@ a:active {
 
 /*Informação de repositório específico*/
 #GridRepo {
-  grid-template: 3fr 1fr 1fr / repeat(4,1fr);
-  grid-gap: 4px;`
+  -ms-grid-rows: 3fr 4px 1fr 4px 1fr;
+  -ms-grid-columns: 1fr 4px 1fr 4px 1fr 4px 1fr;
+      grid-template: 3fr 1fr 1fr / repeat(4,1fr);
+  grid-gap: 4px;
   height: 200px;
   width: 600px;
   font-size: 18px;
 }
 
 #Descricao {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-area: 1 / 1 / span 1 / span 1;
   padding-top: 50%;
   padding-bottom: 50%;
 }
 
 #DescricaoValue {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: 1 / 2 / span 1 / span 3;
 }
 
 #Estrelas {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-area: 2 / 1 / span 1 / span 1;
   padding-top: 11px;
   padding-bottom: 11px;
 }
 
 #EstrelasValue {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-area: 2 / 2 / span 1 / span 1;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #Linguagem {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
   grid-area: 2 / 3 / span 1 / span 1;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #LinguagemValue {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
   grid-area: 2 / 4 / span 1 / span 1;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #Voltar {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-area: 3 / 1 / span 1 / span 1;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 #Link {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
   grid-area: 3 / 4 / span 1 / span 1;
   padding-top: 20px;
   padding-bottom: 20px;

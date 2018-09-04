@@ -30,4 +30,3 @@ Próximos passos
 - Consertar problemas de funcionamento no IE
 - Refactoring
 - Melhorar loadtime
-- Bug: EventHandler não funciona corretamente ao arrastar os links de repositórios

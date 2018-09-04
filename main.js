@@ -79,9 +79,7 @@ function loadUser(userName) {
         );
         a.setAttribute("class", "RepositoryLink");
         a.setAttribute("href", "../repository");
-        a.addEventListener("click",function(){
-          localStorage.setItem("repositoryPath", `https://api.github.com/repos/${user}/${data.name}${token}`);
-        });
+        a.setAttribute("onclick", "repositoryClickHandler()");
         set_draggable(a);
         append(grupoRepos, a);
       });
@@ -90,7 +88,9 @@ function loadUser(userName) {
       console.log(JSON.stringify(error));
     });
 }
-
+function repositoryClickHandler() {
+  localStorage.setItem("repositoryPath", event.target.id)
+}
 //Função que carrega os dados de um repositório específico
 function loadRepository() {
   //Pega URL para fazer o fetch no GitHub

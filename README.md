@@ -1,7 +1,7 @@
 # GitHubUserSearch
-Software de interação com a API do GitHub, utilizando rotas
+App de interação com a API do GitHub, utilizando rotas
 
-Software hospedado em https://pesquisagithub.herokuapp.com/
+App hospedado em https://pesquisagithub.herokuapp.com/ (desatualizado)
 
 Versão 1.2.2
 

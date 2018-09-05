@@ -19,13 +19,15 @@ Para instalação:
 Para utilização:
 - Em "http://localhost:5000", digite o nome do usuário que deseja buscar para acessar suas informações
 - Clique em qualquer um de seus repositórios para obter informações detalhadas sobre este
-- Alternativamente, para pesquisar um usuário diretamente, pode ser utilizado o link "http://localhost:5000/user/{nomeDoUsuario}"
+- Alternativamente, para pesquisar um usuário diretamente, pode ser utilizado o link "http://localhost:5000/users/{nomeDoUsuario}"
 - Para acessar os emails públicos, clique no link na página inicial e faça a autorização
 
 
 Próximos passos
-- Mostrar usuário na URL quando a pesquisa é feita através do index 
-- Melhorar arraste dos links para repositórios
-- Consertar página do repositório no firefox
 - Refactoring
 - Melhorar loadtime
+
+**Bugs**
+- Página do repositório no firefox não carrega corretamente
+- Formulário na página inicial não funciona corretamente no firefox
+- Rotas não funcionam corretamente quando há OAUTH

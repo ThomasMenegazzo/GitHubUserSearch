@@ -38,11 +38,13 @@ function dragLeave(e) {
 function dropped(e) {
   e.preventDefault();
   e.stopPropagation();
-  if (e.target.localName === 'a') {
-    e.target.style.background = "";  
+  e.target.style.background = "";
+  e.target.parentNode.insertBefore(source,e.target.nextSibling);
+  /* if (e.target.localName === 'a') {
+      
     source.outerHTML = e.target.outerHTML;
     e.target.outerHTML = e.dataTransfer.getData("text/plain"); 
-    }
+    } */
 }
 
 //Criação dos elementos da lista de repositórios

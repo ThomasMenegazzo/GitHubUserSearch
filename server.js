@@ -19,20 +19,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 //Define pasta de arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Rota para busca de usuário no GitHub através do index
-app.post('/user', function(req, res){
-  var newUser = req.body.userName;
-  if (authToken){newUser = `${newUser}?access_token=${authToken}`}
-  res.render('user', {newUser: newUser});
-});
-
-//Rota para a página com informações do repositório
-app.post('/repository', function(req, res){	
-  res.render('repository');	
-});
-
 //Rota para busca de usuário no GitHub através da URL
-app.get('/user/:newUser', function(req, res){
+app.get('/users/:newUser', function(req, res){
   newUser = req.params.newUser;
   if (authToken){newUser = `${newUser}?access_token=${authToken}`}
   res.render('user', {newUser: newUser});
@@ -65,4 +53,4 @@ app.get('/', function(req, res){
 });
 
 //Inicialização do server
-app.listen(process.env.PORT || 5000,()=>console.log('Listening on port'))
+app.listen(process.env.PORT || 5000,()=>console.log(`Listening on port ${process.env.PORT || 5000}`))

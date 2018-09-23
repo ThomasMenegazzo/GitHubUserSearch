@@ -5,8 +5,8 @@ var request = require('superagent');
 
 var app = express();
 var authToken = null;
-var clientID = '5782b95fb2b134b19b62';
-var  clientSecret = '9cc9aa44974f290925aa53318b12541f9e385676';
+var clientID = '';
+var  clientSecret = '';
 
 //Define engine e pasta para o HTML
 app.set('view engine','ejs');
